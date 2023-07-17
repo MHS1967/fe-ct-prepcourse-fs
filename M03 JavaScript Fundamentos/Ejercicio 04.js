@@ -33,6 +33,7 @@ function redondearHaciaArriba(num) {
    if (num < -1) {return Math.trunc(num);}
    else if (num > -1 && num <= 0 ) { return 0; }
    else if (num > 0 && num <= 1 ) { return 1; }
+   else if (num - Math.trunc(num) == 0) { return num; }  //Sin decimales
    else if (num - Math.trunc(num) < 0.5) { return Math.trunc(num)+1; }
    else return Math.round(num); 
  }
